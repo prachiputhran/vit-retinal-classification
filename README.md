@@ -2,7 +2,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Paper](https://img.shields.io/badge/Paper-Research-orange)](Research_Paper.pdf)
+[![Paper](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21442782-blue)](https://zenodo.org/records/21442782)
 
 > A quantitative evaluation of SHAP and LIME post-hoc explainability methods across
 > Logistic Regression, Random Forest, and Neural Network models on two healthcare datasets.
@@ -121,8 +121,9 @@ python test.py
              Machine Learning Systems},
   author  = {Puthran, Prachi},
   year    = {2026},
-  school  = {Dr. D.Y. Patil's Ramrao Adik Institute of Technology},
-  note    = {Under guidance of Prof. Sandeep Sangle}
+  doi     = {10.5281/zenodo.21442782},
+  url     = {https://zenodo.org/records/21442782},
+  note    = {Under guidance of Prof. Sandeep Sangle, RAIT}
 }
 ```
 
