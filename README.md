@@ -61,3 +61,71 @@ dataset/model combinations.
 ---
 
 ## Project Structure
+```
+├── dataset/
+│   ├── train/
+│   ├── val/
+│   └── test/
+├── train_vit.py        # Training script with validation loop
+├── evaluate.py         # Evaluation + confusion matrix
+├── test.py             # Single-image inference
+├── requirements.txt
+└── README.md
+```
+
+## Setup & Usage
+
+```bash
+# 1. Clone the repo
+git clone https://github.com/prachiputhran/vit-retinal-classification.git
+cd vit-retinal-classification
+
+# 2. Create virtual environment
+python -m venv venv
+source venv/bin/activate      # Windows: venv\Scripts\activate
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Train
+python train_vit.py
+
+# 5. Evaluate
+python evaluate.py
+
+# 6. Single image inference
+python test.py
+```
+
+---
+
+## Findings
+
+- **Consistency:** Both SHAP and LIME scored above 0.96 across all configurations.
+  SHAP held a small but consistent advantage in every dataset/model combination.
+- **Stability:** The largest gap between the two methods. SHAP remained stable
+  (≥0.9467) under Gaussian input perturbation; LIME scores clustered around
+  0.68–0.71, raising reliability concerns for high-stakes deployment.
+- **Rank Correlation:** LIME ranked features closer to the linear LR baseline,
+  suggesting it oversimplifies non-linear models. SHAP's lower (sometimes negative)
+  correlations with LR coefficients reflect its ability to capture non-linear,
+  interaction-aware contributions — expected and appropriate behaviour.
+
+---
+
+## Citation
+
+```bibtex
+@article{puthran2026xai,
+  title   = {Evaluating Explainable AI Methods in High-Stakes Healthcare
+             Machine Learning Systems},
+  author  = {Puthran, Prachi},
+  year    = {2026},
+  school  = {Dr. D.Y. Patil's Ramrao Adik Institute of Technology},
+  note    = {Under guidance of Prof. Sandeep Sangle}
+}
+```
+
+## License
+
+MIT License. See [LICENSE](curl https://opensource.org/licenses/MIT -o LICENSE) for details.
